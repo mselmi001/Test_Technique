@@ -1,7 +1,19 @@
+
+<!DOCTYPE html>
+<html>
 <form method="post"  role="form" action="/">
+  {% csrf_token %}
   Vous etes maintenant connecté
   <div>
              {{ user.username }}<br>
+             {{ user.first_name }}<br>
              {{ user.email }}<br>
-</div>
+  </div>
+  <div>
+    <button name="edit">Modifier mes informations</button>
+  </div>
 </form>
+
+
+
+</html>
